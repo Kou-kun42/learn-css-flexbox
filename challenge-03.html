@@ -1,235 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>Flex Box Challenge 3 Solution</title>
+    <style>
+      /* Your styles here */
 
-<head>
-  <title>Flex Box Challenge 3 Solution</title>
-  <style>
-    /* Your styles here */
+      body {
+        /* Set a base font style */
+        /* font family Helvetica */
+        font-family: Arial, Helvetica, sans-serif;
 
-    body {
-      /* Set a base font style */
-      /* font family Helvetica */
-      
-      /* font weight 100 */
-      
-      /* font size 18px */
-      
-      /* line-height 1.5 */
-      
-      /* color #666 */
-      
-      /* display flex */
-      
-      /* justify content center */
-      
-      /* align-items: center; */
+        /* font weight 100 */
+        font-weight: 100;
 
-    }
+        /* font size 18px */
+        font-size: 18px;
 
-    /* Use flex to arrange everything in a column */
-    form {
-      /* use flex to display everything in the form in a column */
-      
-      /* padding 2em */
-      
-      /* Make the form fill the space but not larger than 600px */
-      /* width: 100% */
-      
-      /* max-width 600px */
-      
-    }
+        /* line-height 1.5 */
+        line-break: 1.5;
 
-    /* Some general styles */
-    input,
-    textarea {
-      /* font size 1em */
-      
-      /* padding 0.75em */
-      
-    }
+        /* color #666 */
+        color: #666;
 
-    /* File upload styles */
+        /* display flex */
+        display: flex;
 
-    input[type=file] {
-      /* File is special we'll hide it's input */
-      /* Hide the file input. You'll use the label for interaction */
-      
-    }
+        /* justify content center */
+        justify-content: center;
 
-    label[for=input-file] {
-      /* Make this label look like a button */
-      /* border style solid, border width 1px */
-      
-      /* padding 1em */
-      
-      /* border radius 0.25em */
-     
-      /* text align center */
-      
-    }
+        /* align-items: center; */
+        align-items: center;
+      }
 
-    textarea {
-      /* This changes how the box model is calculated */
-      /* box-sizing: border-box; */
-      /* width 100% fill the horizontal space */
-      
-      /* height of 6em */
-      
-    }
+      /* Use flex to arrange everything in a column */
+      form {
+        /* use flex to display everything in the form in a column */
+        display: flex;
+        flex-direction: column;
 
-    /* Use flex to arrange each of the labels in a column */
-    /* This covers the first 4 inputs */
-    label {
-      /* display flex direction column */
-      
-    }
+        /* padding 2em */
+        padding: 2em;
 
-    /* The radio buttons and checkboxes need to arranged in a row */
-    label.h {
-      /* flex direction rol */
-      
-      /* align items center */
-      
-      /* Add some margin to make some space */
-      /* margin left 0.25em, margin top 0, margin right 0.25em margin left 0 */
-      
-    }
+        /* Make the form fill the space but not larger than 600px */
+        /* width: 100% */
+        width: 100%;
 
-    /* Style input type text, email, password, datetime, number */
-    /* Use padding, border, margin, and border radius */
-    input[type=text],
-    input[type=email],
-    input[type=date],
-    input[type=number] {
-      /* border solid 1px #666 */
-      
-      /* margin top and bottom 1em left and right 0 */
-      
-      /* border radius 0.25em */
-      
-    }
+        /* max-width 600px */
+        max-width: 600px;
+      }
 
-    /* Style the inputs type radio, checkbox, file */
-    input[type=radio],
-    input[type=checkbox],
-    input[type=file] {
+      /* Some general styles */
+      input,
+      textarea {
+        /* font size 1em */
+        font-size: 1em;
 
-    }
+        /* padding 0.75em */
+        padding: 0.75em;
+      }
 
-    input > span {
-      /* margin left 1em 0 everywhere else */
+      /* File upload styles */
 
-    }
+      input[type="file"] {
+        /* File is special we'll hide it's input */
+        /* Hide the file input. You'll use the label for interaction */
+        display: none;
+      }
 
-    button[type=submit] {
-      /* padding 1em all sides */
-      
-      /* color orange */
-      
-      /* border none */
-      
-      /* border radius 0.25em */
-      
-      /* margin 1em bottom, 0 on the other 3 sides */
-      
-      /* width 100px */
-      
-      /* Move this to right with flex */
-      /* align-self: flex-end; */
-    }
+      label[for="input-file"] {
+        /* Make this label look like a button */
+        /* border style solid, border width 1px */
+        border-style: solid;
+        border-width: 1px;
 
-    form > section {
-      /* margin on the top and bottom 1em, margin 0 left and right */
+        /* padding 1em */
+        padding: 1em;
 
-    }
+        /* border radius 0.25em */
+        border-radius: 0.25em;
 
-    form > section:last-child {
-      /* align-self: flex-end; */
-    }
-  </style>
-</head>
+        /* text align center */
+        text-align: center;
+      }
 
-<body>
-  <form action="#" method="post">
+      textarea {
+        /* This changes how the box model is calculated */
+        /* box-sizing: border-box; */
+        /* width 100% fill the horizontal space */
+        box-sizing: border-box;
+        width: 100%;
 
-    <section>
-      <label>
-        <span>Name</span>
-        <input name="name" type="text" placeholder="Your name">
-      </label>
+        /* height of 6em */
+        height: 6em;
+      }
 
-      <label>
-        <span>Email</span>
-        <input name="email" type="email" placeholder="email">
-      </label>
+      /* Use flex to arrange each of the labels in a column */
+      /* This covers the first 4 inputs */
+      label {
+        /* display flex direction column */
+        display: flex;
+        flex-direction: column;
+      }
 
+      /* The radio buttons and checkboxes need to arranged in a row */
+      label.h {
+        /* flex direction rol */
+        flex-direction: row;
 
-      <label>
-        <span>Pet Count</span>
-        <input name="pets" type="number" placeholder="# of pets">
-      </label>
+        /* align items center */
+        align-items: center;
 
+        /* Add some margin to make some space */
+        /* margin left 0.25em, margin top 0, margin right 0.25em margin left 0 */
+        margin: 0.25em 0 0.25em 0;
+      }
 
-      <label>
-        <span>Birthday</span>
-        <input name="birthday" type="date" placeholder="birthday">
-      </label>
-    </section>
+      /* Style input type text, email, password, datetime, number */
+      /* Use padding, border, margin, and border radius */
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="number"] {
+        /* border solid 1px #666 */
+        border: solid 1px #666;
 
-    <section>
-      <label class="h" for="radio-admin">
-        <span>Prefix</span>
-        <select name="prefix">
-          <option>Mr</option>
-          <option>Mrs</option>
-          <option>Ms</option>
-          <option>Sir</option>
-          <option>Madam</option>
-          <option>Dr</option>
-          <option>None</option>
-        </select>
-      </label>
-    </section>
+        /* margin top and bottom 1em left and right 0 */
+        margin: 1em 0;
 
-    <section>
-      <label class="h" for="radio-admin">
-        <input id="radio-admin" type="radio" name="role" value="Admin" />
-        <span>Admin</span>
-      </label>
+        /* border radius 0.25em */
+        border-radius: 0.25em;
+      }
 
-      <label class="h">
-        <input type="radio" name="role" value="Editor" />
-        <span>Editor</span>
-      </label>
+      /* Style the inputs type radio, checkbox, file */
+      input[type="radio"],
+      input[type="checkbox"],
+      input[type="file"] {
+      }
 
-      <label class="h">
-        <input type="radio" name="role" value="Contributor" />
-        <span>Contributor</span>
-      </label>
-    </section>
-    <section>
-      <label class="h">
-        <input type="checkbox" name="public">
-        <span>Public Bio</span>
-      </label>
-    </section>
+      input > span {
+        /* margin left 1em 0 everywhere else */
+        margin: 0 0 0 1em;
+      }
 
-    <section>
-      <textarea name="bio"></textarea>
-    </section>
+      button[type="submit"] {
+        /* padding 1em all sides */
+        padding: 1em;
 
-    <section>
-      <label for="input-file">
-        <input name="image" type="file" id="input-file">
-        Upload Image
-      </label>
-    </section>
+        /* color orange */
+        color: orange;
 
-    <section>
-      <button type="submit">Submit</button>
-    </section>
+        /* border none */
+        border: none;
 
-  </form>
-</body>
+        /* border radius 0.25em */
+        border-radius: 0.25em;
 
+        /* margin 1em bottom, 0 on the other 3 sides */
+        margin: 0 0 1em 0;
+
+        /* width 100px */
+        width: 100px;
+
+        /* Move this to right with flex */
+        /* align-self: flex-end; */
+        align-self: flex-end;
+      }
+
+      form > section {
+        /* margin on the top and bottom 1em, margin 0 left and right */
+        margin: 1em 0;
+      }
+
+      form > section:last-child {
+        /* align-self: flex-end; */
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="post">
+      <section>
+        <label>
+          <span>Name</span>
+          <input name="name" type="text" placeholder="Your name" />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" placeholder="email" />
+        </label>
+
+        <label>
+          <span>Pet Count</span>
+          <input name="pets" type="number" placeholder="# of pets" />
+        </label>
+
+        <label>
+          <span>Birthday</span>
+          <input name="birthday" type="date" placeholder="birthday" />
+        </label>
+      </section>
+
+      <section>
+        <label class="h" for="radio-admin">
+          <span>Prefix</span>
+          <select name="prefix">
+            <option>Mr</option>
+            <option>Mrs</option>
+            <option>Ms</option>
+            <option>Sir</option>
+            <option>Madam</option>
+            <option>Dr</option>
+            <option>None</option>
+          </select>
+        </label>
+      </section>
+
+      <section>
+        <label class="h" for="radio-admin">
+          <input id="radio-admin" type="radio" name="role" value="Admin" />
+          <span>Admin</span>
+        </label>
+
+        <label class="h">
+          <input type="radio" name="role" value="Editor" />
+          <span>Editor</span>
+        </label>
+
+        <label class="h">
+          <input type="radio" name="role" value="Contributor" />
+          <span>Contributor</span>
+        </label>
+      </section>
+      <section>
+        <label class="h">
+          <input type="checkbox" name="public" />
+          <span>Public Bio</span>
+        </label>
+      </section>
+
+      <section>
+        <textarea name="bio"></textarea>
+      </section>
+
+      <section>
+        <label for="input-file">
+          <input name="image" type="file" id="input-file" />
+          Upload Image
+        </label>
+      </section>
+
+      <section>
+        <button type="submit">Submit</button>
+      </section>
+    </form>
+  </body>
 </html>

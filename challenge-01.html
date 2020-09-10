@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Flex Box Challenge 1</title>
+    <style>
+      /* Your styles here */
 
-<head>
-  <title>Flex Box Challenge 1</title>
-  <style>
-  /* Your styles here */
+      body,
+      html {
+        /* Make document take up the height of the page */
+        /* Set the height to 100% */
+        height: 100%;
+      }
 
-  body, html {
-    /* Make document take up the height of the page */
-    /* Set the height to 100% */
-    
-  }
+      body {
+        /* display flex */
+        display: flex;
+        /* Set the direction to column */
+        flex-direction: column;
 
-  body {
-    /* display flex */
-    display: flex;
-    /* Set the direction to column */
-    
-    /* arrnage the children in the centewr on the main axis */
-    /* justify-content center */
-    
-    /* Arrange elements on the cross axis */
-    /* align-items centwr */
-    
-  }
+        /* arrnage the children in the centewr on the main axis */
+        /* justify-content center */
+        justify-content: center;
 
-  .box {
-    /* Make font big 2em */
-    
-    /* Width 50px */
-    
-    /* height 50px */
-    
-    /* background color brown */
-    
-    /* color white */
-    
-    /* padding 2em */
-    
-    /* margin 1px */
+        /* Arrange elements on the cross axis */
+        /* align-items centwr */
+        align-items: center;
+      }
 
-    /* Put the content of esch box in the center */
-    /* display flex */
-  
-    /* justify content center */
-    
-    /* align items center */
-  }
-</style>
-</head>
+      .box {
+        /* Make font big 2em */
+        font-size: 2em;
 
-<body>
-  <div class="box">
-    <div class="small-box">A</div>
-    <div class="small-box">B</div>
-    <div class="small-box">Z</div>
-  </div>
-  <div class="box">
-    <div class="small-box">A</div>
-    <div class="small-box">B</div>
-    <div class="small-box">C</div>
-  </div>
-  <div class="box">
-    <div class="small-box">A</div>
-    <div class="small-box">B</div>
-    <div class="small-box">C</div>
-  </div>
-</body>
+        /* Width 50px */
+        width: 50px;
+
+        /* height 50px */
+        height: 50px;
+
+        /* background color brown */
+        background-color: brown;
+
+        /* color white */
+        color: white;
+
+        /* padding 2em */
+        padding: 2em;
+
+        /* margin 1px */
+        margin: 1px;
+
+        /* Put the content of esch box in the center */
+        /* display flex */
+        display: flex;
+
+        /* justify content center */
+        justify-content: center;
+
+        /* align items center */
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="small-box">A</div>
+      <div class="small-box">B</div>
+      <div class="small-box">Z</div>
+    </div>
+    <div class="box">
+      <div class="small-box">A</div>
+      <div class="small-box">B</div>
+      <div class="small-box">C</div>
+    </div>
+    <div class="box">
+      <div class="small-box">A</div>
+      <div class="small-box">B</div>
+      <div class="small-box">C</div>
+    </div>
+  </body>
 </html>
